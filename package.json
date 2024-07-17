@@ -1,0 +1,22 @@
+{
+  "name": "eslint-plugin-predictable",
+  "version": "0.0.0",
+  "main": "lib/index.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rijx/eslint-plugin-predictable.git"
+  },
+  "files": [
+    "lib/**.js",
+    "!lib/**/*.test.js"
+  ],
+  "scripts": {
+    "test": "mocha lib/**/*.test.js"
+  },
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "eslint": "^8.45.0",
+    "mocha": "^11.1.0"
+  }
+}

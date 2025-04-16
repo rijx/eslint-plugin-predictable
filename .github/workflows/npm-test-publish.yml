@@ -53,6 +53,10 @@ jobs:
       - name: Update version from tag
         run: pnpm version ${GITHUB_REF#refs/tags/} --no-git-tag-version
       
+      - name: Setup NPM authentication
+        run: |
+          echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}' > ~/.npmrc
+      
       - name: Publish to npm
         run: pnpm publish --no-git-checks
         env:
